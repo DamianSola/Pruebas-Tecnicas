@@ -1,5 +1,5 @@
 // tests/isPalindrome.test.ts
-import { isPalindrome, isAnagram, countVowels } from './index';
+import { isPalindrome, isAnagram, countVowels, reverseWords } from './index';
 
 xdescribe('isPalindrome', () => {
   it('should return true for a valid palindrome', () => {
@@ -29,12 +29,24 @@ xdescribe('isAnagram', () => {
 })
 
 
-describe('countVowels', () => {
+xdescribe('countVowels', () => {
   it('should return 5, because "murcielago" has 5 vocals', () => {
     expect(countVowels('murcielago')).toBe(5)
   });
   it('should return 4 because "caserola has 4 vocals"', () => {
     expect(countVowels('caserola')).toBe(4)
   });
+})
+
+describe('reverseWords', () => {
+  it('should return "autito un compre me".', () => {
+    expect(reverseWords("me compre un autito")).toBe('autito un compre me')
+  });
+  it('should return "Mexico". ', () => {
+    expect(reverseWords("Mexico")).toBe("Mexico")
+  });
+  it('should return "frente al van que los son soldados mejores Los". ', () => {
+    expect(reverseWords("Los mejores soldados son los que van al frente")).toBe("frente al van que los son soldados mejores Los")
+  })
 })
 

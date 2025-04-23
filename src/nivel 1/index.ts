@@ -13,7 +13,6 @@ export function isPalindrome(str: string): boolean {
 // es Anagrama
 
 export function isAnagram (word1: string , word2: string) : boolean {
-
   const cleaned = word1.toLocaleLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join('')
   const cleaned2 = word2.toLocaleLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join('')
   return cleaned === cleaned2;
@@ -22,17 +21,17 @@ export function isAnagram (word1: string , word2: string) : boolean {
 
 // contar vocales
 export function countVowels (str: string): number {
-  
   let vocals = ['a', 'e', 'i', 'o', 'u']
   const filtersLetter = str.split('').filter(e => vocals.includes(e))
-
-
   console.log(filtersLetter.length)
   return filtersLetter.length;
 }
 
-export function reverseWords () {
-  
+// palabras en orden invertido
+export function reverseWords (str: string): string {
+  const toReverse : string = str.split(' ').reverse().join(" ")
+  console.log(toReverse)
+  return toReverse;
 }
 
 
