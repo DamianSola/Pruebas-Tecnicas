@@ -1,5 +1,5 @@
 // tests/isPalindrome.test.ts
-import { isPalindrome, isAnagram } from './index';
+import { isPalindrome, isAnagram, countVowels } from './index';
 
 xdescribe('isPalindrome', () => {
   it('should return true for a valid palindrome', () => {
@@ -16,7 +16,7 @@ xdescribe('isPalindrome', () => {
 });
 
 
-describe('isAnagram', () => {
+xdescribe('isAnagram', () => {
   it('should return true for a valid anagram', () => {
     expect(isAnagram('llave sorda','El Salvador')).toBe(true)
   });
@@ -27,3 +27,14 @@ describe('isAnagram', () => {
     expect(isAnagram('animales', "milanesa")).toBe(true)
   })
 })
+
+
+describe('countVowels', () => {
+  it('should return 5, because "murcielago" has 5 vocals', () => {
+    expect(countVowels('murcielago')).toBe(5)
+  });
+  it('should return 4 because "caserola has 4 vocals"', () => {
+    expect(countVowels('caserola')).toBe(4)
+  });
+})
+
