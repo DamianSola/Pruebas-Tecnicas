@@ -1,7 +1,5 @@
 {
     "compilerOptions": {
-      // ... otras opciones del compilador
       "esModuleInterop": true,
-      // ... más opciones
     }
   }
