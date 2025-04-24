@@ -49,12 +49,9 @@ export function isIsogram (str: string): boolean {
 export function longestWord (str: string) {
 
   const toArray = str.split(" ")
-
   let longest= toArray[0]
-
   for (let i = 0 ; i < toArray.length ;i++){
     if(toArray[i].length > longest.length) longest = toArray[i];
   }
-  
   return longest;
 }

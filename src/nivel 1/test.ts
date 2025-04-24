@@ -1,7 +1,7 @@
 // tests/isPalindrome.test.ts
 import { isPalindrome, isAnagram, countVowels, reverseWords, isIsogram, longestWord } from './index';
 
-xdescribe('isPalindrome', () => {
+describe('isPalindrome', () => {
   it('should return true for a valid palindrome', () => {
     expect(isPalindrome('A man a plan a canal Panama')).toBe(true);
   });
@@ -16,7 +16,7 @@ xdescribe('isPalindrome', () => {
 });
 
 
-xdescribe('isAnagram', () => {
+describe('isAnagram', () => {
   it('should return true for a valid anagram', () => {
     expect(isAnagram('llave sorda','El Salvador')).toBe(true)
   });
@@ -29,7 +29,7 @@ xdescribe('isAnagram', () => {
 })
 
 
-xdescribe('countVowels', () => {
+describe('countVowels', () => {
   it('should return 5, because "murcielago" has 5 vocals', () => {
     expect(countVowels('murcielago')).toBe(5)
   });
@@ -38,7 +38,7 @@ xdescribe('countVowels', () => {
   });
 })
 
-xdescribe('reverseWords', () => {
+describe('reverseWords', () => {
   it('should return "autito un compre me".', () => {
     expect(reverseWords("me compre un autito")).toBe('autito un compre me')
   });
@@ -50,7 +50,7 @@ xdescribe('reverseWords', () => {
   })
 })
 
-xdescribe('isIsogram', () => {
+describe('isIsogram', () => {
   it('should return true for a valid isogram', ()=>{
     expect(isIsogram("murcielago")).toBe(true)
   });
