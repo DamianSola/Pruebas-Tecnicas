@@ -34,11 +34,27 @@ export function reverseWords (str: string): string {
   return toReverse;
 }
 
-
-export function isIsogram () {
-  
+//Palabra que no tiene letras repetidas. (isograma)
+export function isIsogram (str: string): boolean {
+  const sortArray  = str.split("").sort()  
+  for (let index = 0; index < sortArray.length; index++) {
+    let cont = sortArray.filter(e => e === sortArray[index])
+    if(cont.length > 1) return false
+  }
+  return true
 }
 
-export function longestWord () {
 
+//devuelve la palabra más larga de la frase. 
+export function longestWord (str: string) {
+
+  const toArray = str.split(" ")
+
+  let longest= toArray[0]
+
+  for (let i = 0 ; i < toArray.length ;i++){
+    if(toArray[i].length > longest.length) longest = toArray[i];
+  }
+  
+  return longest;
 }

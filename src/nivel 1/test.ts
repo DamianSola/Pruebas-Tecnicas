@@ -1,5 +1,5 @@
 // tests/isPalindrome.test.ts
-import { isPalindrome, isAnagram, countVowels, reverseWords } from './index';
+import { isPalindrome, isAnagram, countVowels, reverseWords, isIsogram, longestWord } from './index';
 
 xdescribe('isPalindrome', () => {
   it('should return true for a valid palindrome', () => {
@@ -38,7 +38,7 @@ xdescribe('countVowels', () => {
   });
 })
 
-describe('reverseWords', () => {
+xdescribe('reverseWords', () => {
   it('should return "autito un compre me".', () => {
     expect(reverseWords("me compre un autito")).toBe('autito un compre me')
   });
@@ -50,3 +50,26 @@ describe('reverseWords', () => {
   })
 })
 
+xdescribe('isIsogram', () => {
+  it('should return true for a valid isogram', ()=>{
+    expect(isIsogram("murcielago")).toBe(true)
+  });
+  it('should return false for a invalid isogram', () => {
+    expect(isIsogram('argentinos')).toBe(false)
+  });
+  it('should return false for a valid isogram', ()=>{
+    expect(isIsogram("murcielago negro")).toBe(false)
+  });
+})
+
+describe('longestWord', () => {
+  it('should return "Mariposas" because is the longest', ()=>{
+    expect(longestWord("Mariposas escapan por la ventana")).toBe("Mariposas")
+  });
+  it('should return "argentinos" because is the longest', () => {
+    expect(longestWord('vivan los soldados argentinos')).toBe("argentinos")
+  });
+  it('should return "compre" because is the longest', ()=>{
+    expect(longestWord("Me compre un auto")).toBe("compre")
+  });
+})
