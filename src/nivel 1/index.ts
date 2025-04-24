@@ -44,9 +44,8 @@ export function isIsogram (str: string): boolean {
   return true
 }
 
-
 //devuelve la palabra más larga de la frase. 
-export function longestWord (str: string) {
+export function longestWord (str: string): string {
 
   const toArray = str.split(" ")
   let longest= toArray[0]
