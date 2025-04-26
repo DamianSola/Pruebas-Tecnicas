@@ -13,8 +13,8 @@ describe('compress', () => {
     it('should return "2j1r4l2e3w".', () => {
         expect(compress('jjrlllleewww')).toBe("2j1r4l2e3w")
     });
-    it('should return "3sp4h1t22m1n".', () => {
-        expect(compress('ssspphhhhtmmn')).toBe("3sp4h1t22m1n")
+    it('should return "3s2p4h1t2m1n".', () => {
+        expect(compress('ssspphhhhtmmn')).toBe("3s2p4h1t2m1n")
     })
 })
 

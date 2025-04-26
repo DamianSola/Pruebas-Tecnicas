@@ -5,11 +5,19 @@ export function isUnique(str: string){
 }
 
 export function compress(str: string):string{
-    let compreString = str.split("")
+  if(str.length === 0 ) return "";
+  let newString = "";
+  let count = 1;
 
-    console.log(compreString)
-
-    return "kfkfkf"
+  for(let i = 1; i <= str.length ; i++){
+    if(str[i] === str[i-1]){
+        count ++;
+    }else{
+        newString += count + str[i-1];
+        count = 1
+    }
+}
+    return newString.length < str.length ? newString : str;
 }
 
 
